@@ -229,7 +229,4 @@ app.get('/fetchalljobs', fetchuser, async (req, res) => {
     res.json(jobs)
 })
 
-// Print the current active port on console
-app.listen(port, () => {
-    console.log(`Job-Portal listening on port ${port}`)
-})
+app.listen(process.env.PORT || 3000)
